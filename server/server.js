@@ -172,11 +172,6 @@ app.post('/addLecturer', (req, res) => {
     const department = req.body.department
     const salary = req.body.salary
 
-    console.log(firstName)
-    console.log(lastName)
-    console.log(department)
-    console.log(salary)
-
     db.query(
         `INSERT INTO lecturer VALUES (?, ?, ?, ?, ?)`, [lecturerID, firstName, lastName, department, salary],
         (err, result) => {
